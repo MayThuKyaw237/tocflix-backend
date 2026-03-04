@@ -185,7 +185,7 @@ def get_new_arrivals():
 
 if __name__ == "__main__":
     get_crawler()
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 10000))
     app.run(debug=False, port=port)
 
 # this part is just for testing before we set up the flask to test backend fetching correctly or not.
