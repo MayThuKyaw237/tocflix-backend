@@ -26,7 +26,7 @@ def get_crawler() -> IMDbMovieCrawler:
             print("Cold-start: fetching IMDb Top 150 …")
             c = IMDbMovieCrawler()
             c.fetch_top_movies()                                   # list of 150
-            c.fetch_movies_details_parallel(c.movies, max_workers=20)# all details
+            c.fetch_movies_details_parallel(c.movies, max_workers=2)# all details
             _crawler_cache = c
             print(f"Cache ready — {len(c.movies)} movies loaded")
         return _crawler_cache
